@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-oraclejdk8:8.131.11-slim
+FROM frolvlad/alpine-java:jdk8-slim
 VOLUME /tmp
 COPY target/kotlin-user-service-0.0.1-SNAPSHOT.jar app.jar
 RUN sh -c 'touch /app.jar'

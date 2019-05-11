@@ -13,6 +13,15 @@ import java.net.URI
 @RestController
 class UsersController(val userRepo: UserRepository) {
 
+
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping("/test")
+    fun getTest(): String {
+        return "hello world.";
+    }
+
+
+
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/users/{userId}")
     fun getUser(@PathVariable userId: String): UserDTO {
